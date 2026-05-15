@@ -14,22 +14,22 @@ export default function SectionSettings({ sections, onCountChange, onLabelChange
     <div
       className="rounded-2xl p-5 w-72"
       style={{
-        background: 'linear-gradient(180deg, #1a0a00 0%, #0d0005 100%)',
-        border: '1px solid rgba(255,215,0,0.25)',
-        boxShadow: '0 4px 24px rgba(0,0,0,0.6)',
+        background: 'linear-gradient(180deg, #2e1200 0%, #1a0808 100%)',
+        border: '1px solid rgba(255,215,0,0.45)',
+        boxShadow: '0 4px 32px rgba(255,140,0,0.2), 0 0 0 1px rgba(255,215,0,0.1)',
       }}
     >
       <h2
         className="text-xl font-bold mb-4 text-center tracking-[0.2em] uppercase"
-        style={{ color: '#FFD700', fontFamily: "'Georgia', serif", textShadow: '0 0 10px rgba(255,215,0,0.4)' }}
+        style={{ color: '#FFE55C', fontFamily: "'Georgia', serif", textShadow: '0 0 16px rgba(255,229,92,0.7)' }}
       >
-        Settings
+        설정
       </h2>
 
       {/* 섹션 개수 슬라이더 */}
       <div className="mb-5">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-sm tracking-wider" style={{ color: '#C8A84B' }}>
+          <span className="text-sm tracking-wider" style={{ color: '#FFD06A' }}>
             섹션 개수
           </span>
           <span

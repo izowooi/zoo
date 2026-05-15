@@ -17,25 +17,25 @@ export default function Home() {
       className="min-h-screen flex flex-col items-center justify-center gap-8 p-6 lg:p-10"
       style={{
         background: `
-          radial-gradient(ellipse at 50% 40%, #1a0a00 0%, #0a0005 50%, #000000 100%)
+          radial-gradient(ellipse at 50% 40%, #c44818 0%, #8b2a08 40%, #5a1020 80%, #3a0818 100%)
         `,
       }}
     >
       {/* 헤더 */}
       <div className="text-center">
         <h1
-          className="text-4xl lg:text-5xl font-bold tracking-[0.3em] uppercase"
+          className="text-4xl lg:text-5xl font-bold tracking-[0.25em]"
           style={{
-            color: '#FFD700',
+            color: '#FFE55C',
             fontFamily: "'Georgia', serif",
-            textShadow: '0 0 20px rgba(255,215,0,0.5), 0 0 40px rgba(255,100,0,0.2)',
+            textShadow: '0 0 30px rgba(255,229,92,0.8), 0 0 60px rgba(255,180,0,0.5), 0 2px 4px rgba(0,0,0,0.6)',
           }}
         >
-          Casino Roulette
+          카지노 룰렛
         </h1>
         <div className="flex items-center justify-center gap-3 mt-2">
           <div className="h-px w-16" style={{ background: 'linear-gradient(to right, transparent, #FFD700)' }} />
-          <span className="text-yellow-600 text-sm tracking-widest">★ SPIN TO WIN ★</span>
+          <span className="text-sm tracking-widest" style={{ color: '#FFD700' }}>★ 행운을 잡아라 ★</span>
           <div className="h-px w-16" style={{ background: 'linear-gradient(to left, transparent, #FFD700)' }} />
         </div>
       </div>

@@ -16,8 +16,10 @@ interface LadderBoardProps {
   onSelectStart: (col: number) => void;
 }
 
-const TRACK_COLOR = "#CBD5E1";
-const ANIMATING_COLOR = "#6366F1";
+const TRACK_COLOR = "#DDD6FE";
+const ANIMATING_COLOR = "#F472B6";
+const DEFAULT_BORDER = "#DDD6FE";
+const DEFAULT_TEXT = "#7C3AED";
 
 export default function LadderBoard({
   ladder,
@@ -75,9 +77,9 @@ export default function LadderBoard({
                 <span
                   className="text-xs sm:text-sm font-medium px-2 py-1 rounded-full border truncate transition-colors max-w-full"
                   style={{
-                    borderColor: color ?? "#CBD5E1",
+                    borderColor: color ?? DEFAULT_BORDER,
                     backgroundColor: color ? `${color}1A` : "transparent",
-                    color: color ?? "#475569",
+                    color: color ?? DEFAULT_TEXT,
                   }}
                   title={name.value}
                 >
@@ -103,7 +105,8 @@ export default function LadderBoard({
                 x2={layout.columnX(col)}
                 y2={layout.rowY(ladder.rowCount)}
                 stroke={TRACK_COLOR}
-                strokeWidth={2}
+                strokeWidth={3}
+                strokeLinecap="round"
               />
             ))}
 
@@ -117,7 +120,8 @@ export default function LadderBoard({
                     x2={layout.columnX(col + 1)}
                     y2={layout.rowY(row + 1)}
                     stroke={TRACK_COLOR}
-                    strokeWidth={2}
+                    strokeWidth={3}
+                    strokeLinecap="round"
                   />
                 ) : null
               )
@@ -167,9 +171,9 @@ export default function LadderBoard({
                 <span
                   className="text-xs sm:text-sm font-medium px-2 py-1 rounded-full border truncate transition-colors max-w-full"
                   style={{
-                    borderColor: color ?? "#CBD5E1",
+                    borderColor: color ?? DEFAULT_BORDER,
                     backgroundColor: color ? `${color}1A` : "transparent",
-                    color: color ?? "#475569",
+                    color: color ?? DEFAULT_TEXT,
                   }}
                   title={prize.value}
                 >

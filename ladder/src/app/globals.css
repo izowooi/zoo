@@ -3,4 +3,44 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-jua: var(--font-jua);
+}
+
+@keyframes title-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes title-shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.title-cute {
+  font-family: var(--font-jua);
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #ff6fa5,
+    #ffb86b,
+    #ffe45e,
+    #6fe3a0,
+    #6fc4ff,
+    #b48bff,
+    #ff6fa5
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation:
+    title-shimmer 4s linear infinite,
+    title-bounce 2.2s ease-in-out infinite;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
 }
